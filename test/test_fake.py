@@ -1,18 +1,12 @@
 import pytest
+from src import foo
 
-def test_fake():
-    # Replace this with your test logic
-    assert True
-
-@pytest.mark.parametrize("input_value, expected_result", [
-    # Add test cases here
-    (1, 1),
-    (2, 2),
-    (3, 3),
-])
-def test_fake_parametrized(input_value, expected_result):
-    # Replace this with your test logic
-    assert input_value == expected_result
+def test_foo(capfd):
+    # Capture the output
+    foo()
+    captured = capfd.readouterr()
+    # Assert that the expected output is printed
+    assert 'HELLO!!' in captured.out
 
 if __name__ == '__main__':
     pytest.main()
