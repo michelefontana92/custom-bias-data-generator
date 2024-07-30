@@ -24,7 +24,7 @@ def adult_gan():
                   general_columns = ['age'],
                   integer_columns = ['age','capital-gain', 'capital-loss','hours-per-week'],
                   problem_type= {'Classification': 'income'},
-                  num_epochs=10
+                  num_epochs=1
     ) 
     return adult_gan
 
