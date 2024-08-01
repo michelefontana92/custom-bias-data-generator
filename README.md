@@ -4,4 +4,4 @@
 
 The documentation can be found in the ```docs/_build/html/index.html``` file.
 
-The CTABGAN model is completely based on the work proposed by Zheng et al. ```CTAB-GAN+: enhancing tabular data synthesis```.
+The CTABGAN model is completely based on the work proposed by Zhao et al. ```CTAB-GAN+: enhancing tabular data synthesis```.
