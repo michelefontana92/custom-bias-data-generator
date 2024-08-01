@@ -25,10 +25,10 @@ def teardown():
     os.remove("data/adult_stat_results.csv")
     os.remove("data/adult_gan.pkl")
 
-def test_gan_initialization(gan):
-    assert gan is not None
-    assert isinstance(gan, CTABGAN)
-    assert gan.raw_df is not None
+def test_gan_initialization(adult_gan):
+    assert adult_gan is not None
+    assert isinstance(adult_gan, CTABGAN)
+    assert adult_gan.raw_df is not None
     
 
 def test_adult_gan_training(adult_gan):

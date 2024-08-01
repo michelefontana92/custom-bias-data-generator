@@ -2,4 +2,6 @@
 
 ![badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/michelefontana92/4c10a1f1f4cfc1d98e4ed48ca189628b/raw/pytest_coverage.json)
 
-The documentation can be found in the ```docs/_build/html/index.html``` file
+The documentation can be found in the ```docs/_build/html/index.html``` file.
+
+The CTABGAN model is completely based on the work proposed by Zheng et al. ```CTAB-GAN+: enhancing tabular data synthesis```.
