@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API &mdash; Custom Bias Generator 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/documentation_options.js?v=d45e8c67"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Example" href="example.html" />
+    <link rel="prev" title="Quick install" href="installing.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Custom Bias Generator
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installing.html">Quick install</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installing.html#github">GitHub</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installing.html#requirements">Requirements</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installing.html#python">Python</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#classes">Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ctabgan"><code class="docutils literal notranslate"><span class="pre">CTABGAN</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#custom_bias_generator.CTABGAN"><code class="docutils literal notranslate"><span class="pre">CTABGAN</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#custom_bias_generator.BiasInjector"><code class="docutils literal notranslate"><span class="pre">BiasInjector</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="example.html">Example</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Custom Bias Generator</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">API</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/API.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="api">
+<h1>API<a class="headerlink" href="#api" title="Link to this heading">¶</a></h1>
+<p>Description of the API of the <code class="docutils literal notranslate"><span class="pre">Custom</span> <span class="pre">Bias</span> <span class="pre">Generator</span></code> package.</p>
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Link to this heading">¶</a></h2>
+<section id="ctabgan">
+<h3><code class="docutils literal notranslate"><span class="pre">CTABGAN</span></code><a class="headerlink" href="#ctabgan" title="Link to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="custom_bias_generator.CTABGAN">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">custom_bias_generator.</span></span><span class="sig-name descname"><span class="pre">CTABGAN</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw_csv_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">categorical_columns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mixed_columns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">general_columns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">problem_type</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#custom_bias_generator.CTABGAN" title="Link to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="custom_bias_generator.CTABGAN.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw_csv_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">categorical_columns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mixed_columns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">general_columns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">problem_type</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#custom_bias_generator.CTABGAN.__init__" title="Link to this definition">¶</a></dt>
+<dd><p>CTABGAN (Conditional Table-based Generative Adversarial Network) class for generating synthetic data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>raw_csv_path</strong> (<em>str</em>) – The file path of the raw CSV data.</p></li>
+<li><p><strong>categorical_columns</strong> (<em>list</em>) – List of column names that are categorical.</p></li>
+<li><p><strong>mixed_columns</strong> (<em>dict</em>) – Dictionary where the keys are column names and the values are the corresponding mixed types.</p></li>
+<li><p><strong>problem_type</strong> (<em>dict</em>) – Dictionary specifying the problem type. The key can be either ‘Classification’ or ‘Regression’. The value is the name of the target variable.</p></li>
+<li><p><strong>**kwargs</strong> – <p>Additional keyword arguments.</p>
+</p></li>
+<li><p><strong>num_epochs</strong> (<em>int</em>) – Number of epochs for training the synthesizer (default: 10).</p></li>
+<li><p><strong>general_columns</strong> (<em>list</em>) – List of column names that are general types (default: []).</p></li>
+<li><p><strong>log_columns</strong> (<em>list</em>) – List of column names that are log-transformed (default: []).</p></li>
+<li><p><strong>non_categorical_columns</strong> (<em>list</em>) – List of column names that are non-categorical types (default: []).</p></li>
+<li><p><strong>integer_columns</strong> (<em>list</em>) – List of column names that are integer types (default: []).</p></li>
+<li><p><strong>test_ratio</strong> (<em>float</em>) – Ratio of test data to split from the raw data (default: 0.2).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_bias_generator.CTABGAN.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#custom_bias_generator.CTABGAN.fit" title="Link to this definition">¶</a></dt>
+<dd><p>Fit the CTABGAN model by performing data preprocessing and training the synthesizer.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_bias_generator.CTABGAN.generate_samples">
+<span class="sig-name descname"><span class="pre">generate_samples</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_samples</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#custom_bias_generator.CTABGAN.generate_samples" title="Link to this definition">¶</a></dt>
+<dd><p>Generate synthetic samples using the trained synthesizer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>num_samples</strong> (<em>int</em>) – Number of synthetic samples to generate.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>DataFrame containing the generated synthetic samples.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_bias_generator.CTABGAN.load">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#custom_bias_generator.CTABGAN.load" title="Link to this definition">¶</a></dt>
+<dd><p>Load a saved CTABGAN instance from a file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>str</em>) – The file path to load the CTABGAN instance from.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The loaded CTABGAN instance.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#custom_bias_generator.CTABGAN" title="custom_bias_generator.CTABGAN">CTABGAN</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_bias_generator.CTABGAN.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#custom_bias_generator.CTABGAN.save" title="Link to this definition">¶</a></dt>
+<dd><p>Save the CTABGAN instance to a file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>str</em>) – The file path to save the CTABGAN instance.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="custom_bias_generator.BiasInjector">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">custom_bias_generator.</span></span><span class="sig-name descname"><span class="pre">BiasInjector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">positive_label_value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#custom_bias_generator.BiasInjector" title="Link to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="custom_bias_generator.BiasInjector.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">positive_label_value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#custom_bias_generator.BiasInjector.__init__" title="Link to this definition">¶</a></dt>
+<dd><p>Initialize the BiasInjector class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_path</strong> (<em>str</em>) – The path to the data file.</p></li>
+<li><p><strong>target_label</strong> (<em>str</em>) – The label of the target variable.</p></li>
+<li><p><strong>positive_label_value</strong> (<em>str</em>) – The value of the positive label.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_bias_generator.BiasInjector.inject_bias">
+<span class="sig-name descname"><span class="pre">inject_bias</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prior_y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_samples</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sensitive_attribute_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pmf_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#custom_bias_generator.BiasInjector.inject_bias" title="Link to this definition">¶</a></dt>
+<dd><p>Inject bias into the data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>prior_y</strong> (<em>float</em>) – The prior probability of the target positive class.</p></li>
+<li><p><strong>n_samples</strong> (<em>int</em>) – The number of samples in the final dataset.</p></li>
+<li><p><strong>sensitive_attribute_list</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – The list of sensitive attributes.</p></li>
+<li><p><strong>pmf_dict</strong> – The dictionary of target values and their corresponding probability mass functions. For example:</p></li>
+</ul>
+</dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pmf_0</span> <span class="o">=</span> <span class="p">[([</span><span class="s1">&#39;Male&#39;</span><span class="p">],</span><span class="mf">0.2</span><span class="p">),([</span><span class="s1">&#39;Female&#39;</span><span class="p">],</span><span class="mf">0.8</span><span class="p">)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pmf_1</span> <span class="o">=</span> <span class="p">[([</span><span class="s1">&#39;Male&#39;</span><span class="p">],</span><span class="mf">0.5</span><span class="p">),([</span><span class="s1">&#39;Female&#39;</span><span class="p">],</span><span class="mf">0.5</span><span class="p">)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pmf_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;&lt;=50K&#39;</span><span class="p">:</span><span class="n">pmf_0</span><span class="p">,</span><span class="s1">&#39;&gt;50K&#39;</span><span class="p">:</span><span class="n">pmf_1</span><span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The mutated data with injected bias.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="installing.html" class="btn btn-neutral float-left" title="Quick install" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="example.html" class="btn btn-neutral float-right" title="Example" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Michele Fontana.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
