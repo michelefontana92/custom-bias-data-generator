@@ -4,17 +4,6 @@ import pandas as pd
 import numpy as np
 import os
 
-@pytest.fixture
-def gan():
-    real_path = "data/king.csv"
-    gan =  CTABGAN(raw_csv_path = real_path,
-    categorical_columns = ['bedrooms', "floors", 'waterfront', 'view', 'condition', 'grade','zipcode'],   
-    mixed_columns= {"sqft_basement":[0.0],  "yr_renovated":[0.0]},
-    general_columns= ["bathrooms", "sqft_living", "sqft_above", "yr_built", "long", "sqft_living15"],
-    problem_type= {"Regression": "price"},
-    num_epochs=20
-    ) 
-    return gan
 
 @pytest.fixture
 def adult_gan():
