@@ -3,3 +3,6 @@
 pytest*
 .coverage
 test_main
+conf.py
+prova.py
+.pytest_cache/*

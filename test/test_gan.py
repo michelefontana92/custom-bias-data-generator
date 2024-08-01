@@ -1,7 +1,8 @@
 import pytest
-from src import CTABGAN, stat_sim
+from custom_bias_generator import CTABGAN, stat_sim
 import pandas as pd
 import numpy as np
+import os
 
 @pytest.fixture
 def gan():
@@ -28,13 +29,18 @@ def adult_gan():
     ) 
     return adult_gan
 
+  
+@pytest.fixture(scope='session')
+def teardown():
+    os.remove("data/adult_synthetic.csv")
+    os.remove("data/adult_stat_results.csv")
+    os.remove("data/adult_gan.pkl")
 
 def test_gan_initialization(gan):
     assert gan is not None
     assert isinstance(gan, CTABGAN)
     assert gan.raw_df is not None
     
-
 
 def test_adult_gan_training(adult_gan):
    
@@ -58,6 +64,15 @@ def test_adult_gan_training(adult_gan):
    stat_results = pd.DataFrame(np.array(stat_res_avg).mean(axis=0).reshape(1,3),columns=stat_columns)
    stat_results.to_csv("data/adult_stat_results.csv", index=False)
 
-def test_gan_evaluation(gan):
-    # Add your test logic here
+def test_gan_save_load(adult_gan):
+   adult_gan.fit()
+   adult_gan.save("data/adult_gan.pkl")
+   gan = CTABGAN.load("data/adult_gan.pkl")
+   assert gan is not None
+   assert isinstance(gan, CTABGAN)
+   gan.generate_samples(10)
+ 
+
+# Execute teardown after all tests
+def test_teardown(teardown):
     pass
